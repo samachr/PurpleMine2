@@ -6,4 +6,5 @@ $(function () {
   new PurpleMine.SidebarToggler()
   new PurpleMine.HistoryTabs()
   new PurpleMine.MenuCollapse()
+  new PurpleMine.TableAsBoard()
 })

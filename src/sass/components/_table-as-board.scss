@@ -1,0 +1,64 @@
+@media screen and (min-width:900px) {
+    table.issues.sprint-view {
+        background-color: #eeeeee;
+        thead {
+            display: flex;
+            background-color: white;
+            margin-bottom: 5px;
+            box-shadow: 0 5px 5px -5px grey;
+            tr > th {
+                background-color: white;
+            }
+        }
+        tbody {
+            display: grid;
+            grid-column-gap: 10px;
+            padding: 10px;
+            tr {
+                justify-content: space-between;
+                background-color: white;
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                td {
+                    border-bottom: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: 2px;
+                    background-color: white;
+                }
+            }
+            tr.group  {
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                td {
+                    span.expander {
+                        display: none;
+                    }
+                    a.toggle-all {
+                        display: none;
+                    }
+                }
+            }
+            tr.issue {
+                td.checkbox {
+                    display: none;
+                }
+                justify-content: space-between;
+                align-items: flex-start;
+                box-shadow: 0 1px 1px gray;
+                border-radius: 7px;
+                padding: 5px;
+                background-color: white;
+            }
+            tr.issue_drop {
+                min-height:100px;
+                border: 1px dotted black;
+                background-color: #eeeeee;
+            }
+        }
+    }
+}
