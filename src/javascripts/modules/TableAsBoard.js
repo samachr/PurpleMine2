@@ -9,7 +9,7 @@ PurpleMine.TableAsBoard = (function () {
     event.dataTransfer.dropEffect = "move";
     document.querySelectorAll('.issue_drop').forEach(function (node) {
       node.style.visibility = 'visible';
-      event.target.style.backgroundColor = '#eeeeee';
+      event.target.style.backgroundColor = '#';
     });
     instance.dragged = event.target;
   }
@@ -17,14 +17,14 @@ PurpleMine.TableAsBoard = (function () {
   function stopDragSprintItem(event) {
     document.querySelectorAll('.issue_drop').forEach(function (node) {
       node.style.visibility = 'hidden';
-      event.target.style.backgroundColor = '#eeeeee';
+      event.target.style.backgroundColor = '#';
     });
     instance.dragged = null
   }
 
   function drop(event) {
     event.preventDefault();
-    event.target.style.backgroundColor = '#eeeeee';
+    event.target.style.backgroundColor = '#';
     var groupName = event.target.getAttribute('data-group-name');
     $('#' + instance.dragged.id).trigger('contextmenu');
 
@@ -52,7 +52,7 @@ PurpleMine.TableAsBoard = (function () {
   }
 
   function dragLeave(event) {
-    event.target.style.backgroundColor = '#eeeeee';
+    event.target.style.backgroundColor = '#';
   }
 
   function createDropElement(row, column, groupName) {
@@ -144,9 +144,9 @@ PurpleMine.TableAsBoard = (function () {
         currentRow += 1;
       }
 
-      var columnsString = '200px';
+      var columnsString = 'auto';
       for (var i = 1; i < currentColumn; i++) {
-        columnsString += ' 200px';
+        columnsString += ' auto';
       }
       tbody.style.gridTemplateColumns = columnsString;
 
